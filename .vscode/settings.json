@@ -67,5 +67,7 @@
         "*.sln": "*.csproj",
         "*.slnx": "*.csproj"
     },
-    "dotnet.defaultSolution": "BottomlessMadness.slnx"
+    "dotnet.defaultSolution": "BottomlessMadness.slnx",
+    "editor.fontSize": 20,
+    "editor.lineHeight": 1.25
 }
