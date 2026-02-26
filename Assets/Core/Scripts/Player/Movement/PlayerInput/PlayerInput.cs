@@ -7,16 +7,11 @@ public class PlayerInput : MonoBehaviour
     InputMap.PlayerActions _playerMap;
     
     private PlayerMover _playerMover;
+    private PlayerJumper _playerJumper;
 
-    void OnEnable()
-    {
-        _inputMap.Enable();
-    }
+    void OnEnable() => _inputMap.Enable();
 
-    void OnDisable()
-    {
-        _inputMap.Disable();
-    }
+    void OnDisable() => _inputMap.Disable();
 
     private void Awake()
     {
@@ -25,7 +20,9 @@ public class PlayerInput : MonoBehaviour
         _playerMap = _inputMap.Player;
         
         _playerMover = GetComponent<PlayerMover>();
+        _playerJumper = GetComponent<PlayerJumper>();
         
+        _playerMap.Jump.performed += context => _playerJumper.Jump();
     }
 
     private void Update()
