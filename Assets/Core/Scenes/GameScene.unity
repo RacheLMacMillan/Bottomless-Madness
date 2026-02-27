@@ -388,6 +388,7 @@ GameObject:
   - component: {fileID: 957302099}
   - component: {fileID: 957302098}
   - component: {fileID: 957302102}
+  - component: {fileID: 957302103}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -424,6 +425,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMover
   _MaxSpeed: 10
+  _sprintingMultiplier: 1.986
 --- !u!114 &957302099
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -436,6 +438,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a87e92bd9ca47f4c8e1eaec42a58dbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerInput
+  _playerMover: {fileID: 0}
 --- !u!61 &957302100
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -522,6 +525,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerJumper
   _jumpForce: 4
+--- !u!114 &957302103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 957302096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 939045180af76f942864b7b0990b6a1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerSprinter
+  _sprintMultiplier: 2.033
 --- !u!1 &1094619116
 GameObject:
   m_ObjectHideFlags: 0
